@@ -1,15 +1,16 @@
-# HUDSMatch
-HUDSMatch is a web application that recommends food shelters to university dining hall for donations based on number of matches in excess/requested inventory and distance between the two parties.
+# Pack&Match
 
-How to test the web application:
+Pack&Match is a food donation matching web application built in Python that algorithmically connects dining hall surplus with local shelters based on the number of matches in excess/requested inventory and the distance between the two parties (using MapQuest Distance Matrix API). Final project for Harvard CS50 in winter 2018.
 
-As you can read on the About page (index page) of our site, Pack&Match is a food management program that connects Harvard University Dining Services (HUDS) to local food shelters. Basically, we allow food shelters to register and make requests for food, and then we tell HUDS the top shelters to donate to that day by implementing a matching algorithm. Right now, our site is mostly meant to be used by shelters who are requesting food from HUDS only. But as seen on our Register page, we still allow other entities to register as donors. Upon registering, they would see the same donation forms and be able to use the same matching algorithms as HUDS. However, they would need to communicate with the other donors to see when each one is donating, because our current code is constructed so that only one donor can donate once on a given day. We currently do not have a way for the donors to interact with one another, so the best way to test our website is to register only one donor (HUDS) and to test how it interacts with the requests from multiple shelters. For example, this is how we would present our project at the CS50 fair.
+## How to test the web application:
 
-Before logging in:
+Pack&Match is a food management program that connects Harvard University Dining Services (HUDS) to local food shelters. We allow food shelters to register and make requests for food, then tell HUDS the top shelters to donate to that day by implementing a matching algorithm. Right now, our site is mostly meant to be used by shelters who are requesting food from HUDS only. But as seen on our Register page, we still allow other entities to register as donors. Upon registering, they would see the same donation forms and be able to use the same matching algorithms as HUDS. However, they would need to communicate with the other donors to see when each one is donating, because our current code is constructed so that only one donor can donate once on a given day. We currently do not have a way for the donors to interact with one another, so the best way to test our website is to register only one donor (HUDS) and to test how it interacts with the requests from multiple shelters. 
+
+## Before logging in:
 
 When you first click on a link to our website, you will see our About page. This just contains some information about Pack&Match (name/motto, description, and short video). The nav bar at the top of the page allows you to register, log in, or click on Pack&Match. Clicking Pack&Match is mostly meant to take you to the HUDS Home page or Shelter Home page, but it requires a login. So if you click it before logging in, you will just see our Login page. Before logging in, you must register either as a donor (in our current case, HUDS) or as a requester (a shelter). Alerts and apologies will notify you about mistakes such as empty fields, incorrect password confirmations, and incorrect usernames/passwords. When you register as either HUDS or a requester/shelter, please input a valid address -- our web application uses a Distance Matrix API from Mapquests so that real distances can be calculated between two addresses.
 
-Walkthrough (as a donor):
+## Walkthrough (as a donor):
 
 After registering and then logging in as a donor, you will be redirected to the donor homepage (this is the page that the Pack&Match icon in the navigation bar will redirect to, if you are logged in as a donor). The two options, in the form of buttons, on this page are to add a donation (“Add Donation”), and to donate all current donations now (“Donate Now”).
 
@@ -21,7 +22,7 @@ On the other hand, if shelters have made requests for the day you decide to dona
 
 You can press Deliver at most once a day (in fact, only one donor in total can donate once a day, as mentioned above). This is because we take all the requests in an entire day and enter them into our algorithm; we do not clear past requests when a donor presses Deliver, so if you want to accumulate excess inventory over a few days and then donate them all at once, you can do so by continuously submitting donation forms on our website and our algorithm will take a sum over all the days of inventory when you are ready to deliver. However, you can accumulate donations for as many days as you want before donating (the shelters who requested food on these days would simply be ignored). After delivering, you will be taken to a short page thanking you for donating. You can then begin accumulating more requests.
 
-Walkthrough (as a shelter):
+## Walkthrough (as a shelter):
 
 Once you’ve registered as a requester from our index page, you will be redirected to the homepage for requesters and you can now log in using your username and password. The homepage will contain two different cards, one labeled “Welcome, Shelters!” where there is a button for you to access the food to request food donations, and another card labeled “Thank you for requesting” where there is a button for you to access a webpage that displays a history of all requests ever made by you as a shelter.
 
