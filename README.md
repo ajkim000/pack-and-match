@@ -8,7 +8,7 @@ Pack&Match is a food management program that connects Harvard University Dining 
 
 When you first click on a link to our website, you will see our About page. This just contains some information about Pack&Match (name/motto, description, and short video). The nav bar at the top of the page allows you to register, log in, or click on Pack&Match. Clicking Pack&Match is mostly meant to take you to the HUDS Home page or Shelter Home page, but it requires a login. So if you click it before logging in, you will just see our Login page. Before logging in, you must register either as a donor (in our current case, HUDS) or as a requester (a shelter). Alerts and apologies will notify you about mistakes such as empty fields, incorrect password confirmations, and incorrect usernames/passwords. When you register as either HUDS or a requester/shelter, please input a valid address -- our web application uses a Distance Matrix API from Mapquests so that real distances can be calculated between two addresses.
 
-## Walkthrough (for donors)
+## Walkthrough for donors
 
 After registering and then logging in as a donor, you will be redirected to the donor homepage (this is the page that the Pack&Match icon in the navigation bar will redirect to, if you are logged in as a donor). The two options, in the form of buttons, on this page are to add a donation (“Add Donation”), and to donate all current donations now (“Donate Now”).
 
@@ -20,7 +20,7 @@ On the other hand, if shelters have made requests for the day you decide to dona
 
 You can press Deliver at most once a day (in fact, only one donor in total can donate once a day, as mentioned above). This is because we take all the requests in an entire day and enter them into our algorithm; we do not clear past requests when a donor presses Deliver, so if you want to accumulate excess inventory over a few days and then donate them all at once, you can do so by continuously submitting donation forms on our website and our algorithm will take a sum over all the days of inventory when you are ready to deliver. However, you can accumulate donations for as many days as you want before donating (the shelters who requested food on these days would simply be ignored). After delivering, you will be taken to a short page thanking you for donating. You can then begin accumulating more requests.
 
-## Walkthrough (for shelters)
+## Walkthrough for shelters
 
 Once you’ve registered as a requester from our index page, you will be redirected to the homepage for requesters and you can now log in using your username and password. The homepage will contain two different cards, one labeled “Welcome, Shelters!” where there is a button for you to access the food to request food donations, and another card labeled “Thank you for requesting” where there is a button for you to access a webpage that displays a history of all requests ever made by you as a shelter.
 
