@@ -1,6 +1,6 @@
 # Pack&Match
 
-Pack&Match is a food donation matching web application built in Python that algorithmically connects dining hall surplus with local shelters based on the number of matches in excess/requested inventory and the distance between the two parties (using MapQuest Distance Matrix API). Final project for Harvard CS50 in winter 2018.
+Pack&Match is a food donation matching web application built in Python that algorithmically connects dining hall surplus with local shelters based on the number of matches in excess/requested inventory and the distance between the two parties (using MapQuest Distance Matrix API). Final project for Harvard CS50 in winter 2018, made in collaboration with Lan Zhang.
 
 ## How to test the web application
 
